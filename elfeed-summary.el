@@ -1549,7 +1549,7 @@ of string."
                       elfeed-summary-refresh-on-each-update)
               (elfeed-summary--refresh-if-exists)))))
     (add-hook 'elfeed-update-hooks elfeed-update-closure)
-    (mapc #'elfeed-update-feed (elfeed--shuffle feeds))
+    (mapc #'elfeed-update-feed (elfeed-shuffle feeds))
     (run-hooks 'elfeed-update-init-hooks)
     (elfeed-db-save)))
 
